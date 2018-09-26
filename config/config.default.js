@@ -9,5 +9,18 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  //use nunjucks tpl
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.html': 'nunjucks',
+    },
+  };
+
+  //api url path 
+  config.path = {
+    serverUrl: 'https://cnodejs.org/api/v1',
+  }
+
   return config;
 };
