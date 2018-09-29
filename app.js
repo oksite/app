@@ -6,6 +6,8 @@
 
  // app.js
 module.exports = app => {
+
+  app.projectName = 'app'
   
   app.beforeStart(async () => {
 
@@ -24,10 +26,21 @@ module.exports = app => {
 
     //Controller 调用直接this.ctx.app.cities
 
-
+    console.log("==app beforeStart==");
 
 
   });
+
+  app.ready(async () => {
+      console.log("==app ready==");
+  })
+
+  app.beforeClose(async () => {
+      console.log("==app beforeClose==");
+  })
+
+
+
 };
 
 

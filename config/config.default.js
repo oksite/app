@@ -17,6 +17,18 @@ module.exports = appInfo => {
     },
   };
 
+  //all cros
+  config.cors ={
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
+  }
+  config.security ={
+    // domainWhiteList: [ 'http://localhost:4200' ],
+    csrf: {
+      enable: false,
+    }
+  }
+
   //api url path 
   config.path = {
     serverUrl: 'https://cnodejs.org/api/v1',

@@ -9,3 +9,8 @@ exports.nunjucks = {
   package: 'egg-view-nunjucks',
 };
 
+//allow cors
+exports.cors = {
+  enable: true,
+  package: 'egg-cors',
+}
